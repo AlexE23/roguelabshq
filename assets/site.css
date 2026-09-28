@@ -94,6 +94,8 @@ a:hover{text-decoration-color:var(--color-accent);color:var(--color-ink)}
 .statement .small nav{display:flex;flex-wrap:wrap;gap:var(--space-sm) var(--space-lg)}
 .statement .small a{white-space:nowrap}
 
+@media (max-width:820px){ .after{padding-bottom:var(--space-lg)} .statement{padding-top:var(--space-2xl)} }
+
 /* ---------- document pages (legal, 404) ---------- */
 .doc{padding-block:calc(var(--space-3xl) + var(--space-xl)) var(--space-2xl)}
 .doc .wrap{max-width:860px}
