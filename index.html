@@ -1,471 +1,265 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rogue Labs — Independent Software Studio</title>
-  <meta name="description" content="Independent technology studio engineering high-leverage iOS applications, autonomous data pipelines, and playful, high-utility software.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rogue Labs</title>
+<meta name="description" content="Rogue Labs is an independent software company in Saint Joseph, Missouri. We make Penny, the clearance-deal app used by more than 10,000 shoppers a month.">
+<link rel="canonical" href="https://roguelabshq.com/">
+<meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          colors: {
-            brand: {
-              black: '#070709',
-              surface: '#0f0f14',
-              card: '#14141c',
-              border: '#23232f',
-              accent: '#3b82f6',
-            }
-          },
-          animation: {
-            'float-rogue': 'floatRogue 3.5s ease-in-out infinite',
-            'wiggle': 'wiggle 1s ease-in-out infinite',
-            'bounce-subtle': 'bounceSubtle 2s infinite',
-          },
-          keyframes: {
-            floatRogue: {
-              '0%, 100%': { transform: 'translate(0, 0) rotate(22deg)' },
-              '50%': { transform: 'translate(5px, -8px) rotate(27deg)' },
-            },
-            wiggle: {
-              '0%, 100%': { transform: 'rotate(-3deg)' },
-              '50%': { transform: 'rotate(3deg)' },
-            },
-            bounceSubtle: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-4px)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rogue Labs">
+<meta property="og:title" content="Rogue Labs">
+<meta property="og:description" content="An independent software company in Missouri. Makers of Penny, the clearance-deal app.">
+<meta property="og:url" content="https://roguelabshq.com/">
+<meta property="og:image" content="https://roguelabshq.com/assets/og-banner.png">
+<meta name="twitter:card" content="summary_large_image">
 
-  <style>
-    body {
-      background-color: #070709;
-      color: #fafafa;
-    }
-    .grid-bg {
-      background-size: 36px 36px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-    }
-    .radial-top-glow {
-      background: radial-gradient(circle at 50% -15%, rgba(99, 102, 241, 0.15) 0%, rgba(7, 7, 9, 0) 70%);
-    }
-    .glass-card {
-      background: rgba(20, 20, 28, 0.6);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .glass-card:hover {
-      border-color: rgba(255, 255, 255, 0.18);
-      transform: translateY(-2px);
-    }
-    .rogue-cube-active:hover {
-      transform: scale(1.15) rotate(35deg) !important;
-      filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.8));
-    }
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rogue Labs LLC",
+  "alternateName": "Rogue Labs",
+  "url": "https://roguelabshq.com/",
+  "logo": "https://roguelabshq.com/assets/rogue-labs-logo.svg",
+  "email": "alex@roguelabshq.com",
+  "telephone": "+1-816-857-9021",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "117 S Lexington Street, Suite 100",
+    "addressLocality": "Harrisonville",
+    "addressRegion": "MO",
+    "postalCode": "64701",
+    "addressCountry": "US"
+  },
+  "founder": {"@type": "Person", "name": "Alex Sanchez"},
+  "sameAs": ["https://pennydeals.app", "https://apps.apple.com/app/penny-deals/id6747209774"]
+}
+</script>
 </head>
-<body class="min-h-screen font-sans antialiased selection:bg-indigo-500 selection:text-white flex flex-col justify-between relative overflow-x-hidden">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Background Elements -->
-  <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
-  <div class="fixed top-0 left-0 right-0 h-[650px] radial-top-glow pointer-events-none z-0"></div>
-
-  <!-- Top Navigation Bar -->
-  <header class="relative z-20 w-full max-w-5xl mx-auto px-6 py-7 flex items-center justify-between border-b border-zinc-800/60">
-    <a href="/" class="flex items-center gap-3.5 group">
-      <!-- Rogue Labs Breakaway Icon -->
-      <div class="relative">
-        <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="26" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="26" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="12" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="72" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="12" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="72" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          <!-- Detached Rogue Block -->
-          <rect x="80" y="8" width="24" height="24" rx="7" fill="#ffffff" transform="rotate(22 92 20)" class="transition-all duration-300 group-hover:rotate-45 group-hover:translate-x-1.5"/>
-        </svg>
-      </div>
-      
-      <div class="flex flex-col">
-        <span class="text-sm font-extrabold tracking-[0.22em] uppercase text-white font-sans">ROGUE L&#923;BS</span>
-        <span class="text-[9px] font-mono tracking-[0.35em] text-zinc-400 uppercase -mt-0.5">STUDIO</span>
-      </div>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rogue Labs home">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <rect x="12" y="26" width="24" height="24" rx="7"/><rect x="42" y="26" width="24" height="24" rx="7"/>
+        <rect x="12" y="56" width="24" height="24" rx="7"/><rect x="42" y="56" width="24" height="24" rx="7"/><rect x="72" y="56" width="24" height="24" rx="7"/>
+        <rect x="12" y="86" width="24" height="24" rx="7"/><rect x="42" y="86" width="24" height="24" rx="7"/><rect x="72" y="86" width="24" height="24" rx="7"/>
+        <rect class="rogue" x="80" y="8" width="24" height="24" rx="7" transform="rotate(22 92 20)"/>
+      </svg>
+      <span class="wordmark">Rogue Labs</span>
     </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#penny">Penny</a>
+      <a href="#how-we-work">How we work</a>
+      <a href="#company">Company</a>
+    </nav>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+</header>
 
-    <!-- Status Pill & Quick Nav -->
-    <div class="flex items-center gap-3">
-      <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-[11px] font-mono text-zinc-300 shadow-sm">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        ALL SYSTEMS CHILL
-      </div>
-      <a href="mailto:alex@roguelabshq.com" class="text-xs font-mono font-medium text-zinc-300 hover:text-white px-3.5 py-1.5 rounded-xl border border-zinc-800 hover:border-zinc-700 bg-zinc-900/60 transition-all hover:bg-zinc-800">
-        SAY HI ☕️
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Content Container -->
-  <main class="relative z-10 w-full max-w-5xl mx-auto px-6 py-12 sm:py-20 flex-1 space-y-20">
-    
-    <!-- Hero Section -->
-    <section class="flex flex-col-reverse md:flex-row md:items-center justify-between gap-12 pt-2">
-      <div class="max-w-xl space-y-6">
-        <!-- Cute Little Tag -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-950/40 border border-indigo-800/40 text-indigo-300 text-xs font-mono">
-          <span>✨</span>
-          <span>CRAFTING THE UNEXPECTED</span>
-          <span>•</span>
-          <span class="text-zinc-400">SAINT JOSEPH, MO</span>
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
-          Every app sits trapped in the mold.<br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 via-zinc-400 to-indigo-300">
-            We engineer the outliers.
-          </span>
-        </h1>
-
-        <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-          Rogue Labs is a tiny, highly autonomous independent software studio. We design lightning-fast consumer iOS apps, quiet background web crawlers, and algorithmic engines with obsession and craft.
-        </p>
-
-        <!-- CTAs & Micro Actions -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#products" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-black font-bold text-xs tracking-wider uppercase hover:bg-zinc-200 transition-all shadow-xl shadow-white/10 hover:scale-[1.02] active:scale-[0.98]">
-            <span>Meet Our Apps</span>
-            <span class="text-sm">👇</span>
-          </a>
-          <a href="#lab-terminal" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-zinc-900/80 border border-zinc-800 text-zinc-300 font-mono text-xs tracking-wider uppercase hover:bg-zinc-800 hover:text-white transition-all">
-            <span>Peek Inside The Lab</span>
-            <span>⚡️</span>
-          </a>
+<main id="main">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="where eyebrow"><i></i>Independent software · Saint Joseph, Missouri</div>
+        <h1 class="display">We build the tools that find what everyone else walks past.</h1>
+        <p class="lede">Rogue Labs is a small software company. Our first product, Penny, shows shoppers the clearance deals stores don't advertise, and more than 10,000 people use it every month.</p>
+        <div class="hero-actions">
+          <a class="btn solid" href="#penny">See Penny</a>
+          <a class="btn" href="#contact">Work with us</a>
         </div>
       </div>
 
-      <!-- Playful Hero Visual: Interactive Breakaway Block with Speech Bubble -->
-      <div class="relative flex flex-col items-center justify-center p-8 sm:p-12 rounded-3xl glass-card self-center md:self-auto border border-zinc-800/80 shadow-2xl group">
-        
-        <!-- Speech Bubble from the Rogue Block -->
-        <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-white text-black text-[11px] font-mono font-bold shadow-xl animate-bounce-subtle flex items-center gap-1.5 border border-zinc-200">
-          <span>👋</span>
-          <span>Breaking out!</span>
-        </div>
-
-        <svg class="w-48 h-48 sm:w-56 sm:h-56 filter drop-shadow-[0_0_35px_rgba(255,255,255,0.08)] cursor-pointer" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="pokeRogueBlock()">
-          <!-- The Base 8 Grid Blocks -->
-          <rect x="12" y="26" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="26" width="24" height="24" rx="7" fill="#fafafa"/>
-          
-          <rect x="12" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="72" y="56" width="24" height="24" rx="7" fill="#fafafa"/>
-          
-          <rect x="12" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="42" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          <rect x="72" y="86" width="24" height="24" rx="7" fill="#fafafa"/>
-          
-          <!-- The Rogue Breakaway Block (Animated + Interactive) -->
-          <g id="rogue-block" class="animate-float-rogue rogue-cube-active transition-all duration-300" style="transform-origin: 92px 20px;">
-            <rect x="80" y="8" width="24" height="24" rx="7" fill="#ffffff" class="filter drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]"/>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 360">
+          <g class="grid-lines">
+            <line x1="0" y1="92" x2="360" y2="92"/><line x1="0" y1="204" x2="360" y2="204"/><line x1="0" y1="316" x2="360" y2="316"/>
+            <line x1="68" y1="0" x2="68" y2="360"/><line x1="180" y1="0" x2="180" y2="360"/><line x1="292" y1="0" x2="292" y2="360"/>
+          </g>
+          <rect class="slot" x="248" y="48" width="88" height="88" rx="24"/>
+          <rect x="24" y="48" width="88" height="88" rx="24"/><rect x="136" y="48" width="88" height="88" rx="24"/>
+          <rect x="24" y="160" width="88" height="88" rx="24"/><rect x="136" y="160" width="88" height="88" rx="24"/><rect x="248" y="160" width="88" height="88" rx="24"/>
+          <rect x="24" y="272" width="88" height="88" rx="24"/><rect x="136" y="272" width="88" height="88" rx="24"/><rect x="248" y="272" width="88" height="88" rx="24"/>
+          <g class="rogue" id="rogue" style="transform: translate(26px,-58px) rotate(22deg)">
+            <rect x="248" y="48" width="88" height="88" rx="24"/>
+            <path class="price-tag" d="M300 118 h40 a4 4 0 0 1 4 4 v20 a4 4 0 0 1 -4 4 h-40 l-10 -14 z"/>
+            <text class="price" x="302" y="137">$0.01</text>
           </g>
         </svg>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-4 text-center">
-          <span class="text-[10px] font-mono tracking-[0.35em] text-zinc-400 uppercase">IDEAS BREAK BOUNDARIES</span>
-        </div>
-      </div>
-    </section>
+  <!-- Facts -->
+  <section class="facts" aria-label="Penny in numbers">
+    <div class="wrap">
+      <div class="fact"><b data-count="10000" data-suffix="+">10,000+</b><span>people use Penny each month</span></div>
+      <div class="fact"><b data-count="65" data-suffix="+">65+</b><span>stores and brands watched for price drops</span></div>
+      <div class="fact"><b>EN · ES</b><span>built for English and Spanish speakers</span></div>
+      <div class="fact"><b data-count="1">1</b><span>founder, with the rest automated</span></div>
+    </div>
+    <div class="wrap facts-note">Figures as of September 2026.</div>
+  </section>
 
-    <!-- Studio Vitals / Numbers Banner -->
-    <section class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div class="p-5 rounded-2xl glass-card text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1</div>
-        <div class="text-xs font-mono text-zinc-400 mt-1">Solo Operator 👨‍💻</div>
-      </div>
-      <div class="p-5 rounded-2xl glass-card text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">2,000+</div>
-        <div class="text-xs font-mono text-zinc-400 mt-1">Retail Stores Monitored 🛒</div>
-      </div>
-      <div class="p-5 rounded-2xl glass-card text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">120 FPS</div>
-        <div class="text-xs font-mono text-zinc-400 mt-1">Pure Native Swift 📱</div>
-      </div>
-      <div class="p-5 rounded-2xl glass-card text-center">
-        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">0</div>
-        <div class="text-xs font-mono text-zinc-400 mt-1">Bloated Meetings 🧘‍♂️</div>
-      </div>
-    </section>
-
-    <!-- Deployed Products Section (Penny Spotlight) -->
-    <section id="products" class="space-y-6 pt-4">
-      <div class="flex items-center justify-between border-b border-zinc-800/80 pb-4">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-[0.25em] text-indigo-400 font-semibold">Active Products</span>
-          <h2 class="text-2xl font-bold text-white mt-1">What we've shipped</h2>
-        </div>
-        <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 bg-emerald-950/30 px-3 py-1 rounded-full border border-emerald-800/40">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> v1.8.7 LIVE
-        </span>
-      </div>
-
-      <!-- Penny Card -->
-      <div class="p-8 sm:p-10 rounded-3xl glass-card relative overflow-hidden group">
-        <div class="absolute -top-12 -right-12 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 relative z-10">
-          <div class="space-y-4 max-w-xl">
-            <!-- Badges -->
-            <div class="flex flex-wrap items-center gap-2.5">
-              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-400 border border-blue-500/30">
-                FLAGSHIP iOS APP
-              </span>
-              <span class="text-xs font-mono text-zinc-300 bg-zinc-850 px-2.5 py-1 rounded-lg border border-zinc-700/60">
-                iOS 17+ • Widgets
-              </span>
-              <span class="text-xs font-mono text-amber-300 bg-amber-950/30 px-2.5 py-1 rounded-lg border border-amber-800/40 flex items-center gap-1">
-                <span>★</span> 5.0 RATING
-              </span>
+  <!-- Penny -->
+  <section class="section" id="penny">
+    <div class="wrap">
+      <div class="product">
+        <div class="product-copy reveal">
+          <div class="eyebrow">Our product</div>
+          <div class="app-id">
+            <div class="app-icon" aria-hidden="true"><span>P</span></div>
+            <div>
+              <h3>Penny</h3>
+              <div class="muted">Clearance deals &amp; penny lists · iPhone</div>
             </div>
+          </div>
+          <p class="lede">Stores mark down thousands of items without telling anyone. Penny finds those markdowns and shows them to you before the shelf is cleared.</p>
+          <ul class="features">
+            <li><b>Online</b><span>Price drops from Walmart, Target, Home Depot, Amazon and 60+ more stores and brands.</span></li>
+            <li><b>Penny lists</b><span>Weekly Dollar General, Dollar Tree and Family Dollar penny lists.</span></li>
+            <li><b>Near you</b><span>With VIP, scans of nearby Home Depot stores, with the aisle and bay where available.</span></li>
+            <li><b>Verified</b><span>Every lead says so when it needs checking in store. We'd rather under-promise.</span></li>
+          </ul>
+          <div class="store-links">
+            <a class="btn solid" href="https://apps.apple.com/app/penny-deals/id6747209774" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.2 5.8c.6-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>
+              Download on the App Store
+            </a>
+            <a class="btn" href="https://pennydeals.app" target="_blank" rel="noopener">pennydeals.app</a>
+          </div>
+        </div>
 
-            <h3 class="text-3xl font-extrabold text-white tracking-tight">
-              Penny: Ofertas y Alertas
-            </h3>
-
-            <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
-              The high-speed retail clearance radar. Penny lets shoppers and professional resellers scan barcodes in-store and instantly unearth hidden 90% markdowns, 1-cent glitches, and store-specific price drops before shelves get cleared.
-            </p>
-
-            <!-- Feature Pills -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div class="p-3 rounded-2xl bg-zinc-900/80 border border-zinc-800 flex items-center gap-3">
-                <span class="text-lg">🔍</span>
-                <div>
-                  <div class="text-[10px] font-mono text-zinc-500 uppercase">Scanner</div>
-                  <div class="text-xs font-bold text-white font-mono">Instant Barcode</div>
-                </div>
-              </div>
-              <div class="p-3 rounded-2xl bg-zinc-900/80 border border-zinc-800 flex items-center gap-3">
-                <span class="text-lg">🔔</span>
-                <div>
-                  <div class="text-[10px] font-mono text-zinc-500 uppercase">Alerts</div>
-                  <div class="text-xs font-bold text-white font-mono">Sub-Second Push</div>
-                </div>
-              </div>
-              <div class="p-3 rounded-2xl bg-zinc-900/80 border border-zinc-800 flex items-center gap-3 col-span-2 sm:col-span-1">
-                <span class="text-lg">📱</span>
-                <div>
-                  <div class="text-[10px] font-mono text-zinc-500 uppercase">Home Screen</div>
-                  <div class="text-xs font-bold text-white font-mono">Live Widgets</div>
-                </div>
+        <div class="reveal">
+          <div class="phone" role="img" aria-label="Penny's deal feed on an iPhone, showing example markdowns">
+            <div class="screen">
+              <div class="status"><span>9:41</span><span>●●●</span></div>
+              <div class="app-bar"><b>Today</b><span class="live">LIVE</span></div>
+              <div class="feed">
+                <div class="deal"><span class="nm">Swing-N-Slide wooden swing set</span><span class="st">Nearest store</span>
+                  <span class="pr"><span class="tag">−91%</span><span class="now">$115.99</span><span class="was">$1,299.99</span></span></div>
+                <div class="deal"><span class="nm">Satin gold LED vanity light</span><span class="st">Home Depot · Aisle 14 · Bay 3</span>
+                  <span class="pr"><span class="tag">Lead 90</span><span class="now">Verify</span><span class="was">$20.98</span></span></div>
+                <div class="deal"><span class="nm">Qwatto bookshelf</span><span class="st">Online</span>
+                  <span class="pr"><span class="tag">−83%</span><span class="now">$67.99</span><span class="was">$399.99</span></span></div>
+                <div class="deal"><span class="nm">Beats iPhone case</span><span class="st">Online</span>
+                  <span class="pr"><span class="tag">−80%</span><span class="now">$9.99</span><span class="was">$49.99</span></span></div>
+                <div class="deal"><span class="nm">Dollar General penny item</span><span class="st">This week's list</span>
+                  <span class="pr"><span class="tag">Penny</span><span class="now">$0.01</span><span class="was">in store</span></span></div>
               </div>
             </div>
           </div>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 self-start lg:self-center w-full lg:w-auto">
-            <a href="https://pennydeals.app" target="_blank" rel="noopener noreferrer" 
-               class="px-6 py-3.5 rounded-2xl bg-white text-black font-extrabold text-xs tracking-wider uppercase text-center hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 shadow-xl shadow-white/5 hover:scale-[1.02] active:scale-[0.98]">
-              <span>Visit PennyDeals.app</span>
-              <span>🔗</span>
-            </a>
-            <a href="https://apps.apple.com/app/penny-deals/id6747209774" target="_blank" rel="noopener noreferrer" 
-               class="px-6 py-3.5 rounded-2xl bg-zinc-900 border border-zinc-700/80 text-zinc-200 font-mono font-medium text-xs tracking-wider uppercase text-center hover:bg-zinc-800 hover:text-white transition-all flex items-center justify-center gap-2">
-              <span>Get on App Store</span>
-              <span></span>
-            </a>
-          </div>
+          <p class="example">Example listings from pennydeals.app. Prices change daily.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Inside The Lab / Interactive Terminal Section -->
-    <section id="lab-terminal" class="space-y-6 pt-4">
-      <div class="flex items-center justify-between border-b border-zinc-800/80 pb-4">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-[0.25em] text-indigo-400 font-semibold">Skunkworks & R&D</span>
-          <h2 class="text-2xl font-bold text-white mt-1">What's running behind the scenes</h2>
-        </div>
-        <span class="text-xs font-mono text-zinc-500">LIVE TELEMETRY</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Telemetry Card 1 -->
-        <div class="p-6 sm:p-8 rounded-3xl glass-card space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-zinc-800 text-zinc-300 border border-zinc-700/60 flex items-center gap-1.5">
-              <span>🕷️</span> WEB SPIDERS
-            </span>
-            <span class="text-xs font-mono text-emerald-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ACTIVE
-            </span>
-          </div>
-          <h4 class="text-xl font-bold text-white">Retail Inventory Telemetry</h4>
-          <p class="text-sm text-zinc-300 leading-relaxed font-normal">
-            Autonomous multi-node crawler daemons indexing clearance price-tags, stage markdowns (.03, .06, .01 yellow tags), and stock depth across big-box retailers in real time.
-          </p>
-          <div class="pt-3 flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400 border-t border-zinc-800/80">
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">FastAPI</span>
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">PostgreSQL</span>
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">Puppeteer</span>
-          </div>
-        </div>
-
-        <!-- Telemetry Card 2 -->
-        <div class="p-6 sm:p-8 rounded-3xl glass-card space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-zinc-800 text-zinc-300 border border-zinc-700/60 flex items-center gap-1.5">
-              <span>🌦️</span> PREDICTIVE ENGINE
-            </span>
-            <span class="text-xs font-mono text-blue-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> TESTING
-            </span>
-          </div>
-          <h4 class="text-xl font-bold text-white">Meteorological Risk & Market Arbitrage</h4>
-          <p class="text-sm text-zinc-300 leading-relaxed font-normal">
-            Deterministic prediction market analysis matching live NOAA METAR airport weather reports against settled contracts on Kalshi with zero-LLM latency and automated fee gates.
-          </p>
-          <div class="pt-3 flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400 border-t border-zinc-800/80">
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">NOAA METAR</span>
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">Kalshi API</span>
-            <span class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">Python 3.12</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Little Interactive Terminal Easter Egg -->
-    <section class="p-6 sm:p-8 rounded-3xl bg-zinc-950 border border-zinc-800/90 font-mono text-xs space-y-4 shadow-xl">
-      <div class="flex items-center justify-between border-b border-zinc-800/80 pb-3">
-        <div class="flex items-center gap-2">
-          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-          <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-          <span class="ml-2 text-zinc-400 text-[11px]">rogue-terminal — v1.0.0</span>
-        </div>
-        <span class="text-zinc-600 text-[11px]">bash</span>
-      </div>
-
-      <div class="space-y-2 text-zinc-300">
-        <p class="text-zinc-500"># Welcome to the Rogue Labs console. Click any query:</p>
-        <div class="flex flex-wrap gap-2 pt-1">
-          <button onclick="runCommand('mission')" class="px-2.5 py-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-indigo-300 border border-zinc-800 transition-colors">
-            cat mission.txt
-          </button>
-          <button onclick="runCommand('stack')" class="px-2.5 py-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-indigo-300 border border-zinc-800 transition-colors">
-            show-stack
-          </button>
-          <button onclick="runCommand('coffee')" class="px-2.5 py-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-indigo-300 border border-zinc-800 transition-colors">
-            brew-coffee ☕️
-          </button>
-        </div>
-        <div id="terminal-output" class="p-3 rounded-xl bg-black/60 border border-zinc-900 text-emerald-400 font-mono text-xs whitespace-pre-line leading-relaxed min-h-[50px] flex items-center">
-          rogue@hq:~$ Click a command above to inspect our ethos.
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy & Core Values -->
-    <section class="border-t border-zinc-800/80 pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
-      <div class="space-y-2">
-        <div class="font-mono text-xs text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
-          <span>🎯</span> AUTONOMY FIRST
-        </div>
-        <div class="text-sm text-white font-bold">Small Team, Massive Leverage</div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-          Zero bloated layers. We rely on relentless code discipline, background agents, and direct founder execution.
-        </p>
-      </div>
-
-      <div class="space-y-2">
-        <div class="font-mono text-xs text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
-          <span>⚡️</span> NATIVE PURITY
-        </div>
-        <div class="text-sm text-white font-bold">Pure Swift, Zero Slop</div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-          No sluggish webviews or generic cross-platform bloat. We build native software that feels like silk on iOS.
-        </p>
-      </div>
-
-      <div class="space-y-2">
-        <div class="font-mono text-xs text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
-          <span>🔒</span> INDEPENDENT JURISDICTION
-        </div>
-        <div class="text-sm text-white font-bold">Rogue Labs LLC</div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-          Organized in Missouri, operating globally across Apple's App Store and distributed networks.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="relative z-10 w-full max-w-5xl mx-auto px-6 py-10 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
-    <div class="flex items-center gap-2">
-      <span>© 2026 Rogue Labs LLC.</span>
-      <span>•</span>
-      <span class="text-zinc-400">Crafted with ❤️ in Saint Joseph, Missouri.</span>
     </div>
-    <div class="flex items-center gap-5">
-      <a href="https://pennydeals.app" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Penny</a>
-      <a href="https://github.com/AlexE23" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
-      <a href="mailto:alex@roguelabshq.com" class="hover:text-white transition-colors">alex@roguelabshq.com</a>
+  </section>
+
+  <!-- How we work -->
+  <section class="section" id="how-we-work" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How we work</div>
+        <h2 class="display">Small on purpose.</h2>
+        <p class="lede">One founder, a lot of automation, and a short path from a customer's message to a shipped fix.</p>
+      </div>
+      <div class="principles">
+        <div class="principle reveal">
+          <h3>We build the whole stack ourselves</h3>
+          <p>The app, the data behind it and the systems that keep it running are ours. When something breaks, we can fix it the same day.</p>
+        </div>
+        <div class="principle reveal">
+          <h3>Ship small, measure, repeat</h3>
+          <p>We release often and watch what each change does for the people using it. The numbers decide what stays.</p>
+        </div>
+        <div class="principle reveal">
+          <h3>Honest by default</h3>
+          <p>Deals are only useful if they're real. Penny says when a lead needs checking in store, and we don't promise savings we can't show.</p>
+        </div>
+        <div class="principle reveal">
+          <h3>Built for two languages</h3>
+          <p>Penny was bilingual from day one. The app and its website both work in English and Spanish.</p>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Mini Interactive Script -->
-  <script>
-    function pokeRogueBlock() {
-      const el = document.getElementById('rogue-block');
-      el.style.transform = 'translate(10px, -15px) rotate(45deg) scale(1.25)';
-      setTimeout(() => {
-        el.style.transform = '';
-      }, 600);
-    }
+  <!-- Company -->
+  <section class="section" id="company" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Company</div>
+        <h2 class="display">Rogue Labs LLC</h2>
+        <p class="lede">Rogue Labs is the company behind Penny. Here's how to reach the right person.</p>
+      </div>
+      <div class="company">
+        <dl class="entity reveal">
+          <dt>Entity</dt><dd>Rogue Labs LLC, a Missouri limited liability company</dd>
+          <dt>Founded</dt><dd>2026, Saint Joseph, Missouri</dd>
+          <dt>Founder</dt><dd>Alex Sanchez</dd>
+          <dt>Mailing address</dt><dd>117 S Lexington Street, Suite 100<br>Harrisonville, MO 64701</dd>
+          <dt>Phone</dt><dd class="mono">(816) 857-9021</dd>
+          <dt>Products</dt><dd><a href="https://pennydeals.app" target="_blank" rel="noopener">Penny</a> for iPhone</dd>
+          <dt>Brand</dt><dd><a href="/assets/rogue-labs-logo.svg" target="_blank" rel="noopener">Logo (SVG)</a></dd>
+        </dl>
 
-    function runCommand(cmd) {
-      const out = document.getElementById('terminal-output');
-      if (cmd === 'mission') {
-        out.textContent = "rogue@hq:~$ cat mission.txt\n\n\"Build software that solves hard, high-dollar real-world problems. Keep the footprint lean, the craft quiet, and the output unstoppable.\"";
-      } else if (cmd === 'stack') {
-        out.textContent = "rogue@hq:~$ show-stack\n\n• Core: Swift, SwiftUI, Python 3.12, FastAPI\n• Data: PostgreSQL, Tailscale Mesh, Distributed Crawlers\n• AI: Claude 3.5, Gemini 1.5, OpenAI\n• Target: iOS 17+, macOS, Headless Linux";
-      } else if (cmd === 'coffee') {
-        out.textContent = "rogue@hq:~$ brew-coffee ☕️\n\nFresh double espresso pulled. Ready to ship another release.";
-      }
-    }
-  </script>
+        <div class="contacts reveal" id="contact">
+          <div class="contact">
+            <span class="who">Partnerships, press and business</span>
+            <span class="why">Retail partners, investors, journalists, anything about the company.</span>
+            <a class="addr" href="mailto:alex@roguelabshq.com">alex@roguelabshq.com</a>
+            <button class="copy" type="button" data-copy="alex@roguelabshq.com">Copy</button>
+          </div>
+          <div class="contact">
+            <span class="who">Penny help and your account</span>
+            <span class="why">Subscriptions, refunds, a deal that looked wrong, deleting your data.</span>
+            <a class="addr" href="mailto:support@pennydeals.app">support@pennydeals.app</a>
+            <button class="copy" type="button" data-copy="support@pennydeals.app">Copy</button>
+          </div>
+          <div class="contact">
+            <span class="who">Copyright and legal notices</span>
+            <span class="why">DMCA notices go to our registered agent. <a href="/legal.html">How to file one</a>.</span>
+            <a class="addr" href="mailto:support@pennydeals.app">support@pennydeals.app</a>
+            <button class="copy" type="button" data-copy="support@pennydeals.app">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="cta">
+    <div class="wrap reveal">
+      <h2 class="display" style="max-width:14ch">Have an idea that doesn't fit the mold?</h2>
+      <a class="btn solid" href="mailto:alex@roguelabshq.com">Email Alex</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rogue Labs LLC</span>
+    <nav aria-label="Footer">
+      <a href="https://pennydeals.app" target="_blank" rel="noopener">Penny</a>
+      <a href="https://pennydeals.app/privacy" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://pennydeals.app/terms" target="_blank" rel="noopener">Terms</a>
+      <a href="/legal.html">Legal &amp; DMCA</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
