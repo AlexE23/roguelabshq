@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rogue Labs — Software Studio</title>
+  <meta name="description" content="Independent software studio engineering high-leverage iOS applications, autonomous pipelines, and algorithmic systems.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              black: '#09090b',
+              surface: '#121215',
+              border: '#27272a',
+              accent: '#3b82f6',
+              glow: 'rgba(59, 130, 246, 0.15)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050507;
+      color: #fafafa;
+    }
+    .grid-bg {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .radial-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col justify-between relative overflow-x-hidden">
+  
+  <!-- Subtle background grid & glow -->
+  <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-96 radial-glow pointer-events-none z-0"></div>
+
+  <!-- Top Navigation -->
+  <header class="relative z-10 w-full max-w-4xl mx-auto px-6 py-8 flex items-center justify-between border-b border-zinc-800/40">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-700/60 flex items-center justify-center font-mono font-bold text-xs tracking-wider text-blue-400 shadow-inner">
+        RL
+      </div>
+      <span class="text-sm font-semibold tracking-wider uppercase text-zinc-200">Rogue Labs</span>
+    </div>
+    <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-[11px] font-mono text-zinc-400">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      SYSTEMS OPERATIONAL
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 w-full max-w-4xl mx-auto px-6 py-16 sm:py-24 flex-1">
+    
+    <!-- Hero Section -->
+    <div class="max-w-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/40 border border-blue-800/40 text-blue-400 text-xs font-mono mb-6">
+        <span>SOFTWARE STUDIO</span>
+        <span>•</span>
+        <span>SAINT JOSEPH, MO</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+        Engineering high-leverage software & autonomous systems.
+      </h1>
+      <p class="text-base sm:text-lg text-zinc-400 leading-relaxed font-normal mb-12 max-w-xl">
+        Rogue Labs is an independent technology studio designing consumer iOS applications, algorithmic pipelines, and automated intelligence tools.
+      </p>
+    </div>
+
+    <!-- Products & Ventures Grid -->
+    <div class="space-y-4 pt-4">
+      <div class="text-xs font-mono tracking-widest uppercase text-zinc-500 mb-4">
+        Deployed Products
+      </div>
+
+      <!-- Penny Card -->
+      <a href="https://pennydeals.app" target="_blank" rel="noopener noreferrer" 
+         class="group block p-6 sm:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300 hover:bg-zinc-900/70 hover:shadow-2xl hover:shadow-blue-950/20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-blue-600/10 via-transparent to-transparent pointer-events-none rounded-tr-2xl"></div>
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative z-10">
+          <div class="space-y-2 max-w-md">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-medium px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                FLAGSHIP iOS APP
+              </span>
+              <span class="text-xs font-mono text-zinc-500">v1.8.7 LIVE</span>
+            </div>
+            <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              Penny: Ofertas y Alertas
+            </h2>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Real-time retail clearance finder, barcode scanner, and price-error intelligence network designed for professional resellers.
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-2 text-sm font-medium text-white group-hover:text-blue-400 group-hover:translate-x-1 transition-all self-start sm:self-center">
+            <span>Explore Penny</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- R&D / Autonomous Systems Card -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-zinc-950/60 border border-zinc-850/60 relative overflow-hidden">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-md">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-medium px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 border border-zinc-700/50">
+                LABS & INFRASTRUCTURE
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-zinc-200">
+              Autonomous Operations & Intelligence
+            </h3>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Private distributed web spiders, event-driven prediction market analysis, and autonomous AI sentinels.
+            </p>
+          </div>
+          <div class="text-xs font-mono text-zinc-600">
+            INTERNAL PROTOCOL
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Philosophy / About -->
+    <div class="mt-16 pt-12 border-t border-zinc-800/40 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div>
+        <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">Structure</div>
+        <div class="text-sm text-zinc-300 font-medium">Single-Operator Studio</div>
+        <p class="text-xs text-zinc-400 mt-1">Maximum autonomy, automated infrastructure, zero bloated overhead.</p>
+      </div>
+      <div>
+        <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">Philosophy</div>
+        <div class="text-sm text-zinc-300 font-medium">Quiet Craft, Loud Software</div>
+        <p class="text-xs text-zinc-400 mt-1">Disciplined engineering over performative noise.</p>
+      </div>
+      <div>
+        <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">Jurisdiction</div>
+        <div class="text-sm text-zinc-300 font-medium">Rogue Labs LLC</div>
+        <p class="text-xs text-zinc-400 mt-1">Organized in Missouri, operating globally across iOS.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 w-full max-w-4xl mx-auto px-6 py-8 border-t border-zinc-800/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-400">
+    <div>
+      © 2026 Rogue Labs LLC. All rights reserved.
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="mailto:alex@roguelabshq.com" class="hover:text-zinc-300 transition-colors">Inquiries</a>
+      <a href="https://pennydeals.app" target="_blank" class="hover:text-zinc-300 transition-colors">Penny</a>
+    </div>
+  </footer>
+
+</body>
+</html>
