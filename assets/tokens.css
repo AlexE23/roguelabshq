@@ -28,6 +28,8 @@
   --color-stone-dark: oklch(21% 0.02 280);
   --color-edge:    oklch(95% 0.03 80 / 0.22);
   --color-focus:   oklch(84% 0.09 78);
+  --color-dot:     oklch(95% 0.012 80 / 0.09);   /* the background grid the rogue block left */
+  --color-dot-lit: oklch(84% 0.09 78 / 0.30);
 
   /* type */
   --font-display: "Noto Serif Display", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;

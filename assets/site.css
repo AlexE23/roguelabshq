@@ -42,6 +42,12 @@ a:hover{text-decoration-color:var(--color-accent);color:var(--color-ink)}
 /* ---------- Marquee hero ---------- */
 .marquee{position:relative;overflow:clip;min-height:min(100svh,980px);display:grid;place-items:center;
   padding-block:calc(var(--space-2xl) + var(--space-lg) + env(safe-area-inset-top,0px)) calc(var(--space-3xl) * 1.35);isolation:isolate}
+/* the grid the rogue block left: faint dots behind the dark, warm near the light, fading out */
+.marquee::before,.marquee::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-size:28px 28px;background-position:center top}
+.marquee::before{background-image:radial-gradient(circle,var(--color-dot) 1px,transparent 1.6px);
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 38%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 38%,#000 20%,transparent 75%)}
+.marquee::after{background-image:radial-gradient(circle,var(--color-dot-lit) 1.1px,transparent 1.8px);
+  -webkit-mask-image:radial-gradient(circle 260px at calc(50% + 90px) 170px,#000,transparent 80%);mask-image:radial-gradient(circle 260px at calc(50% + 90px) 170px,#000,transparent 80%)}
 .marquee-inner{display:grid;justify-items:center;gap:var(--space-lg);text-align:center}
 .object{width:min(340px,72vw);aspect-ratio:1;position:relative}
 .object svg{width:100%;height:100%;overflow:visible}
