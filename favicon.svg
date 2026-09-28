@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Base 8 blocks of 3x3 grid (size: 24x24, rx: 6, gap: 6) -->
+  <!-- Row 0: Top -->
+  <rect x="12" y="26" width="24" height="24" rx="6" fill="white"/>
+  <rect x="42" y="26" width="24" height="24" rx="6" fill="white"/>
+  <!-- Row 1: Middle -->
+  <rect x="12" y="56" width="24" height="24" rx="6" fill="white"/>
+  <rect x="42" y="56" width="24" height="24" rx="6" fill="white"/>
+  <rect x="72" y="56" width="24" height="24" rx="6" fill="white"/>
+  <!-- Row 2: Bottom -->
+  <rect x="12" y="86" width="24" height="24" rx="6" fill="white"/>
+  <rect x="42" y="86" width="24" height="24" rx="6" fill="white"/>
+  <rect x="72" y="86" width="24" height="24" rx="6" fill="white"/>
+  <!-- The Rogue Block: Detached, floating up & right, rotated ~22deg -->
+  <rect x="80" y="8" width="24" height="24" rx="6" fill="white" transform="rotate(22 92 20)"/>
+</svg>

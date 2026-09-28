@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" fill="none">
+  <!-- Background (transparent by default or solid black when standalone) -->
+  <rect width="900" height="240" fill="transparent"/>
+  
+  <!-- Emblem: 3x3 grid of rounded squircle blocks with top-right Rogue block breaking away -->
+  <g id="emblem" transform="translate(60, 45)">
+    <!-- Base 8 blocks (size: 32x32, rx: 8, gap: 8 => step 40) -->
+    <!-- Row 0: Top -->
+    <rect x="0" y="0" width="32" height="32" rx="8" fill="white"/>
+    <rect x="40" y="0" width="32" height="32" rx="8" fill="white"/>
+    <!-- (x: 80, y: 0) is empty - the Rogue block detached -->
+    
+    <!-- Row 1: Middle -->
+    <rect x="0" y="40" width="32" height="32" rx="8" fill="white"/>
+    <rect x="40" y="40" width="32" height="32" rx="8" fill="white"/>
+    <rect x="80" y="40" width="32" height="32" rx="8" fill="white"/>
+    
+    <!-- Row 2: Bottom -->
+    <rect x="0" y="80" width="32" height="32" rx="8" fill="white"/>
+    <rect x="40" y="80" width="32" height="32" rx="8" fill="white"/>
+    <rect x="80" y="80" width="32" height="32" rx="8" fill="white"/>
+    
+    <!-- The Rogue Block: Detached, floating up & right at an aggressive ~22deg angle -->
+    <rect x="94" y="-24" width="32" height="32" rx="8" fill="white" transform="rotate(22 110 -8)"/>
+  </g>
+
+  <!-- Typography -->
+  <g id="wordmark" transform="translate(260, 115)">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="58" font-weight="800" fill="white" letter-spacing="0.18em">ROGUE L&#923;BS</text>
+    <text x="5" y="46" font-family="'JetBrains Mono', -apple-system, BlinkMacSystemFont, monospace" font-size="16" font-weight="500" fill="#a1a1aa" letter-spacing="0.45em">IDEAS BREAK BOUNDARIES</text>
+  </g>
+</svg>
