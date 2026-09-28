@@ -86,6 +86,21 @@ a:hover{text-decoration-color:var(--color-accent);color:var(--color-ink)}
 .copy[data-state="done"]{color:var(--color-accent);border-color:var(--color-accent)}
 .note{font-size:var(--text-small);color:var(--color-ink-3)}
 
+/* ---------- updates: a plain dated log, newest first ---------- */
+.updates{padding-block:var(--space-2xl) var(--space-xl)}
+.updates h2{margin:0 0 var(--space-xl);color:var(--color-ink);font:300 var(--text-h2)/1.05 var(--font-display);letter-spacing:-.015em}
+.log{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-xl);max-width:48rem}
+.log li{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:var(--space-lg);align-items:baseline}
+.log time{font-size:var(--text-small);color:var(--color-ink-3);white-space:nowrap;position:relative}
+.log h3{margin:0 0 var(--space-2xs);color:var(--color-ink);font:400 1.375rem/1.25 var(--font-display)}
+.log p{margin:0;max-width:var(--measure)}
+.log li.new time::before{content:"";position:absolute;left:calc(-1 * var(--space-md));top:.55em;width:6px;height:6px;border-radius:50%;
+  background:var(--color-accent);box-shadow:0 0 12px var(--color-bloom)}
+@media (max-width:620px){
+  .log li{grid-template-columns:minmax(0,1fr);gap:var(--space-2xs)}
+  .log li.new time::before{position:static;display:inline-block;vertical-align:middle;margin:0 var(--space-xs) .15em 0}
+}
+
 /* ---------- Ft5 statement footer ---------- */
 .statement{padding-block:var(--space-3xl) calc(var(--space-xl) + env(safe-area-inset-bottom,0px))}
 .statement p.line{margin:0 0 var(--space-2xl);max-width:18ch;color:var(--color-ink);font:300 var(--text-h2)/1.08 var(--font-display);letter-spacing:-.015em}
