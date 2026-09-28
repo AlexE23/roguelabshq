@@ -43,6 +43,7 @@
   --space-xl: 40px; --space-2xl: 64px; --space-3xl: 104px; --space-4xl: 168px;
   --gutter: clamp(20px, 5vw, 56px);
   --measure: 34rem;
+  --column: 60rem;   /* the one centred column every section below the hero sits in */
 
   /* motion */
   --ease-out: cubic-bezier(.16, 1, .3, 1);
