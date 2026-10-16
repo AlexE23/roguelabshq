@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-15",
+    "title": "Penny 1.10",
+    "text": "Enjoy a new Week tab, a refreshed Home screen, and faster tab switching.",
+    "version": "1.10",
+    "status": "live"
+  },
+  {
     "date": "2026-09-28",
     "title": "Penny 1.9.1",
     "text": "Dark mode, and a faster sign-up with Apple, Google or email.",
