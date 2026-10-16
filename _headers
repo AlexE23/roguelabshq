@@ -1,0 +1,16 @@
+# Netlify response headers for every path (Aikido surface scan, 2026-10-16: no CSP was set).
+#
+# The policy lists exactly what the pages load: their own scripts and styles under /assets,
+# Google Fonts (the stylesheet from fonts.googleapis.com, the font files from fonts.gstatic.com),
+# and one data: SVG in site.css. Nothing else may run or load. 'unsafe-inline' is in style-src
+# only, for the style="" attributes in index.html; scripts get no such allowance. The JSON-LD
+# block is data, not script, so script-src 'self' does not block it.
+#
+# Adding a third-party script, font, image host or API call means adding its origin here first,
+# or the browser will refuse it.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
